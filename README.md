@@ -11,7 +11,7 @@ CDF or characterization description format is effective in capturing properties 
 It is a baseline proposal for a standard to act as an interface across VLSI software(s) using and/or interfacting with 
 [SPICE simulators](https://en.wikipedia.org/wiki/SPICE).
 
-### CDF in characterization
+## CDF in characterization
 
 It is currently being used in characterization softwares for cells, memories, and IPs. 
 
@@ -39,6 +39,8 @@ Table below covers types of currently supported stimulus types.
 | 16. | ccsn_prop
 | 17. | ccsn_volt
 | 18. | ccsn_mcap
+
+## Other CDF usage
 
 ### CDF in timing verification
 
