@@ -1,4 +1,4 @@
-# Examples of samaple cells
+# Examples of samaple CDFs for common VLSI cells
 
 1. AND2X1
 1. AND2XL
