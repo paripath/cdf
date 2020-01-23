@@ -9,7 +9,7 @@ It is a baseline proposal for a standard to act as an interface across VLSI soft
 
 It is currently being used in characterization softwares for cells, memories, and IPs. 
 
-
+![Using CDF in characterization flow](examples/WhatIsCDF.jpg)
 
 Table below covers types of currently supported stimulus types.
 
@@ -33,3 +33,15 @@ Table below covers types of currently supported stimulus types.
 | 16. | ccsn_prop
 | 17. | ccsn_volt
 | 18. | ccsn_mcap
+
+### CDF in timing verification
+
+### CDF in power analysis
+
+### CDF in noise analysis
+
+### CDF in reliability analysis
+
+###  CDF in timing correlation
+
+### CDF in liberty QA
