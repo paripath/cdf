@@ -2,6 +2,12 @@
 **Characterization Description Format**
 
 CDF or characterization description format is effective in capturing properties of VLSI cells and IPS at several levels of abstraction.
+
+1. Functional Level for VLSI cell
+1. Logic level stimulus
+1. Electrical level stimulus
+1. Measurement of models (timing, power etc)
+
 It is a baseline proposal for a standard to act as an interface across VLSI software(s) using and/or interfacting with 
 [SPICE simulators](https://en.wikipedia.org/wiki/SPICE).
 
@@ -43,5 +49,7 @@ Table below covers types of currently supported stimulus types.
 ### CDF in reliability analysis
 
 ###  CDF in timing correlation
+
+### CDF in liberty generation
 
 ### CDF in liberty QA
