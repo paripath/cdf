@@ -1,0 +1,12 @@
+# Examples of samaple cells
+
+1. AND2X1
+1. AND2XL
+1. DFFX1
+1. HOLDX1
+1. INVX1
+1. INVXL
+1. NAND2X1
+1. TBUFX1
+1. TLATX1
+1. XOR2X1
