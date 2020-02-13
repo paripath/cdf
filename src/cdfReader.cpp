@@ -18,7 +18,7 @@
 #include "cdf.h"
 #include "fstream"
 #include "message.h"
-#include "configManager.h"
+//#include "configManager.h"
 #include <sys/stat.h> //for stat call
 
 using namespace std;
@@ -79,7 +79,7 @@ cdf_reader::cdf_reader(string filename, bool quiet)
 : _line_number(0), _cdf(0x0), _table(0x0), _section(0x0)
 {
     _cmsg = new char[4096];
-    _bus_syntax = configManager::getStr("bus_syntax") ;
+    _bus_syntax = getenv("bus_syntax") ; ;
     _bus_syntax = _bus_syntax.size() && _bus_syntax.size() != 2 ? "[]" : _bus_syntax ; // silent error correction.
 
     if ( !quiet )
