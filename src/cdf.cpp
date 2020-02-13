@@ -18,7 +18,7 @@
 #include "cktCommon.h"
 #include "cdf.h"
 #include "message.h"
-#include "configManager.h"
+//#include "configManager.h"
 #include <iostream>
 #include <fstream>
 
@@ -218,7 +218,7 @@ cdf::spiceBusName(string& spiceNodeName)
     if ( spiceNodeName.size() == 0 )
         return spiceNodeName ;
 
-    string bus_syntax = configManager::getStr("bus_syntax") ;
+    string bus_syntax = getenv("bus_syntax") ;
     if ( ! bus_syntax.empty() )
     {
         size_t idx = spiceNodeName.find_last_of(bus_syntax[0]);
@@ -302,7 +302,7 @@ cdf::getArcScalarValue(string& in, cdf::CHAR_TYPE ctype, bool bit_blast)
             }
         }
     }
-    if ( ctype==cdf::MPW && configManager::getBool("duplicate_mpw") ) {
+    if ( ctype==cdf::MPW && getenv("duplicate_mpw")!=0x0 ) {
         rise_scalar = rise_scalar == FLOAT_MIN ? fall_scalar : rise_scalar ;
         fall_scalar = fall_scalar == FLOAT_MIN ? rise_scalar : fall_scalar ;
     }
@@ -1213,7 +1213,7 @@ cdf::table::print() {
 
     string text = "\ttable " + _name + "\n";
 
-    bool bit_blast = configManager::getBool("expand_buses") ;
+    bool bit_blast = getenv("expand_buses") != 0x0 ;
 
     for (index=0; index<_ports.size(); index++)
     {
