@@ -14,8 +14,9 @@
 //
 #ifndef __PAR_MACROS_
 #define __PAR_MACROS_
+#include <stdlib.h>     /* getenv */
 
-#define DEBUG_ME() atoi(configManager::get("debug", (char*)__FUNCTION__).c_str()) 
+#define DEBUG_ME() strcmp(getenv("debug"), (char*)__FUNCTION__)
 
 #define INTERPOLATE(x1, y1, x2, y2, x) (x2 == x1) ? y1 : y1 + ( ((y2-y1) / (x2-x1)) * (x-x1) )
 
